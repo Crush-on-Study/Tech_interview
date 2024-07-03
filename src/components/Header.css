@@ -1,0 +1,22 @@
+.header {
+    background-color: #a4c797; /* Change this to your desired background color */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .home-link:hover {
+    text-decoration: underline;
+  }
+  

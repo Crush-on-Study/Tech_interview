@@ -1,0 +1,22 @@
+.board-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .board {
+    background-color: #eadbdb;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  .board h3 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .board p {
+    margin: 0;
+  }
+  

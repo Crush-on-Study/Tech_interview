@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header, .navigation {
+  flex-shrink: 0;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  position: fixed;
+  top: 101px; /* Ensure it starts below the navigation */
+  left: 0;
+  background-color: #e2bbbb;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  margin-left: 250px; /* Ensure content starts after the sidebar */
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
