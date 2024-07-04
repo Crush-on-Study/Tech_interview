@@ -4,7 +4,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import './SubLayout.css';
 
-const SubLayout = ({ children, maxIds }) => {
+const SubLayout = ({ children, maxIds, setMaxId }) => {
   const category = window.location.pathname.split('/').pop();
   const categoryCount = maxIds[category] || 0;
 
@@ -14,7 +14,7 @@ const SubLayout = ({ children, maxIds }) => {
       <Navigation />
       <div className="sub-content">
         <h3>{category} 글의 수: {categoryCount}</h3>
-        {children}
+        {React.cloneElement(children, { setMaxId })}
       </div>
       <Footer />
     </div>

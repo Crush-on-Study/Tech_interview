@@ -14,6 +14,10 @@ function App() {
   const [maxIds, setMaxIds] = useState({});
   const [loading, setLoading] = useState(true);
 
+  const setMaxId = (category, maxId) => {
+    setMaxIds(prevMaxIds => ({ ...prevMaxIds, [category]: maxId }));
+  };
+
   useEffect(() => {
     axios.get('http://localhost:5000/counts')
       .then(response => {
@@ -34,10 +38,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainLayout maxIds={maxIds}><Home /></MainLayout>} />
-        <Route path="/category/DataStructures" element={<SubLayout maxIds={maxIds}><DataStructures /></SubLayout>} />
-        <Route path="/category/OperatingSystems" element={<SubLayout maxIds={maxIds}><OperatingSystems /></SubLayout>} />
-        <Route path="/category/Database" element={<SubLayout maxIds={maxIds}><Database /></SubLayout>} />
-        <Route path="/category/:name" element={<SubLayout maxIds={maxIds}><Category /></SubLayout>} />
+        <Route path="/category/DataStructures" element={<SubLayout maxIds={maxIds} setMaxId={setMaxId}><DataStructures /></SubLayout>} />
+        <Route path="/category/OperatingSystems" element={<SubLayout maxIds={maxIds} setMaxId={setMaxId}><OperatingSystems /></SubLayout>} />
+        <Route path="/category/Database" element={<SubLayout maxIds={maxIds} setMaxId={setMaxId}><Database /></SubLayout>} />
+        <Route path="/category/:name" element={<SubLayout maxIds={maxIds} setMaxId={setMaxId}><Category /></SubLayout>} />
       </Routes>
     </Router>
   );
