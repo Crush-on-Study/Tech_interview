@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -73,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Tech_interview
 신입개발자를 위한 실제 면접에서 받은 질문 복기본 및 개념 설명
 >>>>>>> 8295e8f18586beb35749e68fa6048b3e6c5e4263
+=======
+작성 예정
+>>>>>>> 0feb34442069435d9618a42dcecccbf31823406f

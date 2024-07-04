@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState ,useEffect } from 'react';
+=======
+import React, { useEffect } from 'react';
+>>>>>>> 0feb34442069435d9618a42dcecccbf31823406f
 import './Table.css';
 
 const Database = ({ setMaxId }) => {
@@ -10,6 +14,7 @@ const Database = ({ setMaxId }) => {
     { id: 1, title: 'SQL vs NoSQL', description: 'Basics of graph theory and applications.', date: '2024-07-02' },
   ];
 
+<<<<<<< HEAD
   const [selectedPost,setSelectedPost] = useState(null);
   const [currentPage,setCurrentPage] = useState(1);
   const postsPerPage = 5;
@@ -17,10 +22,16 @@ const Database = ({ setMaxId }) => {
   useEffect(() => {
     if (data.length > 0) {
       setMaxId('Database', data.length);
+=======
+  useEffect(() => {
+    if (data.length > 0) {
+      setMaxId('Database', data[0].id);
+>>>>>>> 0feb34442069435d9618a42dcecccbf31823406f
     }
   }, [setMaxId, data]);
 
   const sortedData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+<<<<<<< HEAD
 
   const handleRowClick = (post) => {
     setSelectedPost(post);
@@ -34,6 +45,12 @@ const Database = ({ setMaxId }) => {
   return (
     <div className="content">
       <h2>Operating Systems</h2>
+=======
+
+  return (
+    <div className="content">
+      <h2>Data base</h2>
+>>>>>>> 0feb34442069435d9618a42dcecccbf31823406f
       <table className="data-table">
         <thead>
           <tr>
@@ -44,16 +61,24 @@ const Database = ({ setMaxId }) => {
           </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
           {currentPosts.map((item) => (
             <tr key={item.id} onClick={() => handleRowClick(item)}>
               <td>{item.id}</td>
               <td className="clickable">{item.title}</td>
+=======
+          {sortedData.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.title}</td>
+>>>>>>> 0feb34442069435d9618a42dcecccbf31823406f
               <td>{item.description}</td>
               <td>{item.date}</td>
             </tr>
           ))}
         </tbody>
       </table>
+<<<<<<< HEAD
       <div className="pagination">
         {Array.from({ length: Math.ceil(sortedData.length / postsPerPage) }, (_, index) => (
           <button key={index + 1} onClick={() => paginate(index + 1)}>
@@ -69,9 +94,14 @@ const Database = ({ setMaxId }) => {
           </div>
         </div>
       )}
+=======
+>>>>>>> 0feb34442069435d9618a42dcecccbf31823406f
     </div>
   );
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0feb34442069435d9618a42dcecccbf31823406f
 export default Database;
