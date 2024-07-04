@@ -1,32 +1,61 @@
 .content {
-    padding: 20px;
-  }
-  
-  .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .data-table th, .data-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .data-table th {
-    background-color: #f2f2f2;
-    text-align: left;
-  }
-  
-  .data-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .data-table tr:hover {
-    background-color: #ddd;
-  }
-  
-  .data-table th:last-child, .data-table td:last-child {
-    text-align: center;
-  }
-  
+  padding: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.data-table th:last-child, .data-table td:last-child {
+  text-align: center;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+/*이 아래부터는 컨텐츠 레이아웃 건드는 곳*/
+.post-content {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.content-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

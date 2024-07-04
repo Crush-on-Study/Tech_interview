@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './Header';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 import './MainLayout.css';
 
-const MainLayout = ({ children, setMaxId, maxIds }) => {
-  const totalPosts = Object.values(maxIds).reduce((acc, id) => acc + id, 0);
+const MainLayout = ({ children, maxIds }) => {
+  const totalPosts = Object.values(maxIds).reduce((sum, count) => sum + count, 0);
 
   return (
     <div className="App">
@@ -16,13 +16,13 @@ const MainLayout = ({ children, setMaxId, maxIds }) => {
       <div className="main-content">
         <div className="total-posts">
           <h3>Total Posts: {totalPosts}</h3>
-          <div>
-            {Object.entries(maxIds).map(([category, count]) => (
-              <div key={category}>{category}: {count}</div>
+          <ul>
+            {Object.keys(maxIds).map((category) => (
+              <li key={category}>{category}: {maxIds[category]} posts</li>
             ))}
-          </div>
+          </ul>
         </div>
-        {React.cloneElement(children, { setMaxId })}
+        {children}
       </div>
       <Footer />
     </div>

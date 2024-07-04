@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav className="navigation">
       <ul>
         <li><NavLink to="/category/DataStructures" activeClassName="active-link">자료구조</NavLink></li>
-        <li><NavLink to="/category/DB" activeClassName="active-link">데이터베이스</NavLink></li>
+        <li><NavLink to="/category/Database" activeClassName="active-link">데이터베이스</NavLink></li>
         <li><NavLink to="/category/Algorithms" activeClassName="active-link">알고리즘</NavLink></li>
         <li><NavLink to="/category/Networking" activeClassName="active-link">네트워크</NavLink></li>
         <li><NavLink to="/category/OperatingSystems" activeClassName="active-link">운영체제</NavLink></li>
