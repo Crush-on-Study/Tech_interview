@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root', // MySQL 사용자 이름
-  password: '0000', // MySQL 비밀번호
+  password: '****', // MySQL 비밀번호
   database: 'tech_interview' // MySQL 데이터베이스 이름
 });
 
